@@ -1,0 +1,36 @@
+{
+  "name": "guava/mailcheap-sdk",
+  "description": "PHP Laravel SDK for Mailcheap API",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Lukas Frey",
+      "email": "lukas.frey@guava.cz"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Guava\\Mailcheap\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Guava\\Mailcheap\\Tests\\": "tests"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Guava\\Mailcheap\\MailcheapServiceProvider"
+      ],
+      "aliases": {
+        "Mailcheap": "Guava\\Mailcheap\\Facades\\Mailcheap"
+      }
+    }
+  },
+  "require-dev": {
+    "orchestra/testbench": "^7.0",
+    "phpunit/phpunit": "^9.5"
+  }
+}
